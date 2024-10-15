@@ -35,13 +35,13 @@ app.get('/teas/:id',(req,res) =>{
 })
 
 //delete tea
-app.delete('/teas', (req,res)=>{
+app.delete('/teas/:id', (req,res)=>{
     const index = teaData.findIndex(t=>t.id === parseInt(req.params.id))
     if(index === -1){
         return res.status(404).send('No Tea Found')
     }
     teaData.splice(index, 1) 
-    return res.status(401).send('Tea Not Found')
+    return res.status(401).send('Deleted')
 }) 
 
 
