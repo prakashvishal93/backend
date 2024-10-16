@@ -22,10 +22,7 @@ export default connectDB;
 In the .env file, I've stored the MongoDB connection string as MONGODB_URI.
 
 Additionally, in the constants.js file, I’ve defined the database name as:
-
-javascript
-Copy code
-export const DB_NAME = 'vidtube';
+```export const DB_NAME = 'vidtube'; ```
 
 
 - Finally, in the main index.js file (located in the src directory), I import and execute the connectDB() function to establish the MongoDB connection when the application starts.
