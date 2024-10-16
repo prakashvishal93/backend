@@ -3,12 +3,10 @@
 - In src/db/index.js, the MongoDB connection logic is defined. The connection string is securely stored in the .env file.
 
 - Here's the code for src/db/index.js:
-        javascript
-        Copy code
-        import mongoose from 'mongoose';
-        import { DB_NAME } from '../constants.js';
-
+      
 ```
+import mongoose from 'mongoose';
+import { DB_NAME } from '../constants.js';
 const connectDB = async () => {
     try {
         const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
